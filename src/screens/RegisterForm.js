@@ -9,7 +9,7 @@ const RegisterForm = ({navigation}) => {
     return (
         <ScrollView style={styles.container}>
             <View style={styles.profilecontainer}>
-                <Image style={styles.image}></Image>
+                <Image style={styles.image}source={require('../../assets/dexter.jpg')}></Image>
             </View>
             <View style={styles.formcontainer}>
                 <InputFields label='Full Name'/>
