@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import InputFields from '../components/InputFields';
 import PasswordInputFields from '../components/PasswordInputField';
+import FormButtons from '../components/FormButtons';
 
 
 const SignInForm = ({navigation}) => {
@@ -16,10 +17,8 @@ const SignInForm = ({navigation}) => {
             <View style={styles.formcontainer}>
                 <InputFields label='Email'/>
                 <PasswordInputFields label='Password'/>
+                <FormButtons name='Sign In' handleClick={handleSignIn}/>
                 
-                <TouchableOpacity onPress={handleSignIn} style={styles.button}>
-                    <Text style={styles.buttontext}>Sign In</Text>
-                </TouchableOpacity>
             </View>
             <View style={styles.forgotcontainer}>
                 <Text style={styles.forgotpass}>Forgot?</Text>

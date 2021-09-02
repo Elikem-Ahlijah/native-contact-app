@@ -19,19 +19,14 @@ const LoginPage = ({navigation}) => {
                 <Text style={styles.lowertext}>Sign in or register with your Ampersand email</Text>
             </View>
             <View style={styles.buttonscontainer}>
-                {/* <TouchableOpacity onPress={handleRegister}>
-                    <PageButtons  style={styles.leftbutton} name='REGISTER'/>
-               </TouchableOpacity>
-               <TouchableOpacity onPress={handleSignIn}>
-                    <PageButtons  style={styles.rightbutton} name='SIGN IN'/> 
-               </TouchableOpacity> */}
-            <TouchableOpacity  onPress={handleRegister} style={styles.button}>
-               <Text style={styles.buttontext}>Register</Text>
-            </TouchableOpacity>
-            <TouchableOpacity  onPress={handleSignIn} style={styles.button}>
-               <Text style={styles.buttontext}>Sign In</Text>
-            </TouchableOpacity>
-            </View>
+                
+                <PageButtons handleClick={handleRegister}  style={styles.leftbutton} name='REGISTER'/>
+               
+               
+                <PageButtons handleClick={handleSignIn} style={styles.rightbutton} name='SIGN IN'/> 
+               
+            
+            </View> 
         </View>
     )
 }

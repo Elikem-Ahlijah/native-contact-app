@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 const PageButtons = (props) => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity  style={styles.button}>
+            <TouchableOpacity onPress={props.handleClick} style={styles.button}>
                <Text style={styles.buttontext}>{props.name}</Text>
             </TouchableOpacity>
         </View>
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
     },
     buttontext:{
         color: 'darkgrey',
-        fontSize:15
+        fontSize:20
     }
 })

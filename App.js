@@ -44,7 +44,7 @@ export default function App() {
 											navigation.navigate('My Profile')
 										}
 									>
-									<AntDesign name="user" size={24} color="black" />	
+									<AntDesign name="user" size={24} color="white" />	
 									</TouchableOpacity>
 								);
 							},

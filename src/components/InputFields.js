@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderBottomWidth: 1,
         borderBottomColor:'lightgrey',
-        marginVertical:10,
+        marginVertical:14,
         justifyContent: 'space-between'
     },
     label:{

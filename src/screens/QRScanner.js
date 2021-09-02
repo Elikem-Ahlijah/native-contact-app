@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
+import ScanButtons from '../components/ScanButtons';
 
 const QRScanner = ({navigation}) => {
     const handleScanCode =()=>{
@@ -16,9 +17,10 @@ const QRScanner = ({navigation}) => {
         })();
     }, []);
 
-    const handleBarCodeScanned = ({ type, data }) => {
+    const handleBarCodeScanned = ({ type, data,}) => {
         setScanned(true);
-        alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        navigation.navigate('My Profile')
+        // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     };
 
     if (hasPermission === null) {
@@ -40,10 +42,8 @@ const QRScanner = ({navigation}) => {
             </View>
             <View style={styles.footer}>
                 <Text style={styles.text}>Want to share your contact?</Text>
-                
-                <TouchableOpacity onPress={handleScanCode} style={styles.button}>
-                    <Text style={styles.buttontext}>Send QR</Text>
-                </TouchableOpacity>
+                <ScanButtons handleClick={handleScanCode} name='Send QR'/>
+               
             </View>
         </View>
     )

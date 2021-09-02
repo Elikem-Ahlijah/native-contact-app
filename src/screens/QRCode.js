@@ -23,10 +23,8 @@ const ScannerCode = ({navigation}) => {
             </View>
             <View style={styles.footer}>
             <Text style={styles.text}>Want to add a new connention?</Text>
-                {/* <ScanButtons name='S QR'/> */}
-                <TouchableOpacity onPress={handlescanner} style={styles.button}>
-                    <Text style={styles.buttontext}>Scan QR</Text>
-                </TouchableOpacity>
+                 <ScanButtons handleClick={handlescanner} name='Scan QR'/> 
+                
             </View>
 
         </View>

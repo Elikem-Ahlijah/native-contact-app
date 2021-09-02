@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
+import PageButtons from '../components/PageButtons';
 
 
 const GetStarted = ({navigation}) => {
@@ -16,9 +17,10 @@ const GetStarted = ({navigation}) => {
                 <Text style={styles.text}>CONTACTS</Text>
             </View>
             <View style={styles.buttoncontainer}>
-            <TouchableOpacity  onPress={handleStart} style={styles.button}>
+            {/* <TouchableOpacity  onPress={handleStart} style={styles.button}>
                <Text style={styles.buttontext}>Get Started</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+            <PageButtons handleClick={handleStart} name='Get Started'/>
             </View>
         
                 
