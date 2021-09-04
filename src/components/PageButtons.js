@@ -22,14 +22,14 @@ const styles = StyleSheet.create({
     button:{
         width: 'auto',
 		height: 50,
-        justifyContent: 'center',
-		alignItems: 'center',
+        justifyContent: 'flex-end',
+		// alignItems: 'center',
         borderBottomColor: 'red',
         borderBottomWidth: 2,
         
     },
     buttontext:{
         color: 'darkgrey',
-        fontSize:20
+        fontSize:15
     }
 })

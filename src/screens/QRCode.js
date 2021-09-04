@@ -16,7 +16,11 @@ const ScannerCode = ({navigation}) => {
                 <Text style={styles.subtext}>Scan this QR below to share your contact</Text>
             </View>
             <View style={styles.qrcodecontainer}>
-                <QRCode/>
+                <QRCode content={JSON.stringify({
+                    name: "Elikem Ahlijah",
+                    title: "Chief Executive Officer",
+                    img_url: "../../assets/dexter.jpg"
+            })}/>
             </View>
             <View style={styles.profilecontainer}>
                 <CardPic  name='Elikem Ahlijah' title='Chief Executive Officer'/>
@@ -44,13 +48,15 @@ const styles = StyleSheet.create({
     },
 
     qrcodecontainer:{
-        flex:.40,
+        flex:.5,
         alignItems: 'center',
-        marginBottom: 40
+        marginBottom: 50,
+        
+        
     },
     footer:{
         alignItems: 'center',
-        flex: .1,
+        flex: .15,
         flexDirection: 'row',
         paddingHorizontal: 10,
         borderTopColor: 'lightgrey',

@@ -43,7 +43,7 @@ const RegisterForm = ({navigation}) => {
         <ScrollView style={styles.container}>
             <ImageBackground source={{ uri: image }} style={{ width: 300, height: 300 }}  style={styles.profilecontainer}>
                 <TouchableOpacity style={styles.pickerbutton}  onPress={pickImage}>
-                    <Text style={styles.pickertext} >Pick an image from camera roll</Text>
+                    <Text style={styles.pickertext} >Add Profile Image</Text>
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 
                 {image && <Image  />}

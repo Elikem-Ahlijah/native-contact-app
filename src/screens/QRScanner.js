@@ -17,9 +17,11 @@ const QRScanner = ({navigation}) => {
         })();
     }, []);
 
-    const handleBarCodeScanned = ({ type, data,}) => {
+    const handleBarCodeScanned = ({ type, data}) => {
         setScanned(true);
-        navigation.navigate('My Profile')
+        navigation.navigate('Member Profile', {
+            data
+        })
         // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     };
 
@@ -36,9 +38,8 @@ const QRScanner = ({navigation}) => {
         <View style={styles.container}>
             <View style={styles.scanner}>
                 <BarCodeScanner
-                onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+                onBarCodeScanned={handleBarCodeScanned}
                 style={StyleSheet.absoluteFillObject}/>
-                {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
             </View>
             <View style={styles.footer}>
                 <Text style={styles.text}>Want to share your contact?</Text>
@@ -57,8 +58,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 0
     },
     scanner:{
-        flex:.90,
-        marginHorizontal:0
+        flex:.95,
+        marginHorizontal:0,
+        width: 360
     },
     footer:{
         alignItems: 'center',

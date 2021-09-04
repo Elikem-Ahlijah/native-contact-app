@@ -5,7 +5,7 @@ const InputFields = (props) => {
     return (
         <View style={styles.container}>
             <Text style={styles.label}>{props.label}</Text>
-            <TextInput style={styles.inputfield} ></TextInput>
+            <TextInput textAlign='right' style={styles.inputfield} ></TextInput>
         </View>
     )
 }
@@ -19,15 +19,15 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor:'lightgrey',
         marginVertical:14,
-        justifyContent: 'space-between'
+        
     },
     label:{
-        alignSelf: 'flex-start',
         color: 'grey',
         fontSize:17
     },
     inputfield:{
-        alignSelf: 'flex-end',
-        fontSize: 17
+        flex: 1,
+        fontSize: 17,
+        
     }
 })

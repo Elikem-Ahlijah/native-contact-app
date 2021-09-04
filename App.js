@@ -25,11 +25,13 @@ export default function App() {
 					// header: () => null,
 					headerStyle: {
 						backgroundColor: 'red',
-            
+						
 					},
 					headerTitleStyle: {
 						color: 'white',
 					},
+					headerTintColor: 'white'
+					
 				}}>
         <Stack.Screen options={{header:()=>null}} name='Get Started' component={GetStarted}/>
         <Stack.Screen options={{header:()=>null}} name='Welcome' component={LoginPage} />

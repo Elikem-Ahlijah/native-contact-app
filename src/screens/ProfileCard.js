@@ -6,7 +6,9 @@ import { Entypo } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
 
-const ProfileCard = () => {
+const ProfileCard = ({route}) => {
+    
+
     return (
         <View style={styles.container}>
             <View style={styles.imagecontainer}>
