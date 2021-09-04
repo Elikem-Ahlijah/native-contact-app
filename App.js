@@ -52,7 +52,7 @@ export default function App() {
 							},
 						};
 					}} name='Ampersand' component={ScannerCode} />
-        <Stack.Screen name='Scanner' component={QRScanner}/>
+        <Stack.Screen options={{header:()=>null}} name='Scanner' component={QRScanner}/>
         <Stack.Screen name='Member Profile' component={MemberProfile}/>
         <Stack.Screen name='My Profile' component={ProfileCard} />
         
